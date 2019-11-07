@@ -1,0 +1,38 @@
+<mvc:View controllerName="table_assignment.table_assignment.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="table1" items="{data>/Employee}">
+							<columns>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text text="Employee ID"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text text="Name"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text text="Date"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text text="Language"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle">
+									<cells>
+										<Text text="{data>Employee}" wrapping="true"></Text>
+										<Text text="{data>name}" wrapping="true"></Text>
+										<Text text="{path : 'data>date' , formatter : '.test.fnOnFormatDate'}" wrapping="true"></Text>
+										<Text text="{path : 'data>lang' , formatter : '.test.fnOnFormatLanguage'}" wrapping="true"></Text>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
